@@ -18,9 +18,9 @@ func main() {
 	defer conn.Close()
 
 	client := echo.NewEchoServiceClient(conn)
-	feature, err := client.Echo(context.Background(), &echo.EchoMessage{Msg: "yeeeee"})
+	result, err := client.Echo(context.Background(), &echo.EchoMessage{Msg: "yeeeee"})
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println(feature)
+	fmt.Println(result)
 }

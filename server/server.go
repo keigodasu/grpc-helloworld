@@ -11,6 +11,7 @@ import (
 
 type EchoServer struct{}
 
+//IDLで生成されたサーバ側のインタフェースを実装
 func (s *EchoServer) Echo(ctx context.Context, in *echo.EchoMessage) (*echo.EchoMessage, error) {
 	return &echo.EchoMessage{Msg: "Hello, World !!!!"}, nil
 }
